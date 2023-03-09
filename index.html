@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+ 
+    <link rel="stylesheet" href="style.css">
+    <title>Travel Order and Gatepass Management System </title>
+  
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+            <!-- sidebar menu -->
+  <div class="sidebar">
+    <div class="logo-details">
+      <i class='bx bx-user-circle'></i>
+      <span class="logo_name">Admin</span>
+    </div>
+      <ul class="nav-links">
+        <li>
+          <a href="index.html" class="active">
+            <i class='bx bx-grid-alt' ></i>
+            <span class="links_name">Dashboard</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class='bx bxs-group' ></i>
+            <span class="links_name">Users</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class='bx bx-file' ></i>
+            <span class="links_name">Documents</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class='bx bx-folder-open' ></i>
+            <span class="links_name">Records</span>
+          </a>
+        </li>
+        <li>
+          <a href="tra_request.html">
+            <i class='bx bx-clipboard' ></i>
+            <span class="links_name"> Travel Requests</span><i class="fa fa-chevron-down"></i>
+          </a>
+        </li>
+        <li class="log_out">
+          <a href="login.html">
+            <i class='bx bx-log-out'></i>
+            <span class="links_name">Log out</span>
+          </a>
+        </li>
+      </ul>
+  </div>
+  <section class="home-section">
+    <nav class="nav_menu">
+      <div class="sidebar-button">
+        <i class='bx bx-menu sidebarBtn'></i>
+        <span class="dashboard">Dashboard</span>
+      </div>
+      <div class="profile-details">
+        <img src="profile.png" alt="">
+        <span class="admin_name">Administrator</span>
+      </div>
+    </nav>
+
+    <div class="home-content">
+      <div class="overview-boxes">
+        <div class="box one">
+          <div class="right-side">
+            <div class="box-topic">Gatepass</div>
+            <div class="box-status">Approved</div>
+            <div class="number">0</div>
+          </div>
+          <i class='bx bx-credit-card pic app'></i>
+        </div>
+        <div class="box two">
+          <div class="right-side">
+            <div class="box-topic">Travel Order</div>
+            <div class="box-status">Approved</div>
+            <div class="number">0</div>
+          </div>
+          <i class='bx bx-credit-card-front pic app' ></i>
+        </div>
+         <div class="box three">
+          <div class="right-side">
+            <div class="box-topic">Gatepass</div>
+            <div class="box-status">Pending</div>
+            <div class="number">0</div>
+          </div>
+          <i class='bx bx-loader pic gate' ></i>
+        </div>
+        <div class="box four">
+          <div class="right-side">
+            <div class="box-topic">Travel Order</div>
+            <div class="box-status">Pending</div>
+            <div class="number">0</div>
+          </div>
+          <i class='bx bx-loader-circle pic gate' ></i>
+        </div>
+         <div class="box five">
+          <div class="right-side">
+            <div class="box-topic">Gate Pass</div>
+            <div class="box-status">Disapproved</div>
+            <div class="number">0</div>
+          </div>
+          <i class='bx bxs-dislike pic dis' ></i>
+        </div>
+        <div class="box six">
+          <div class="right-side">
+            <div class="box-topic">Travel Order</div>
+            <div class="box-status">Disapproved</div>
+            <div class="number">0</div>
+          </div>
+          <i class='bx bx-dislike pic dis' ></i>
+        </div>
+      </div>
+      </div>
+  </section>
+
+  <script>
+   let sidebar = document.querySelector(".sidebar");
+let sidebarBtn = document.querySelector(".sidebarBtn");
+sidebarBtn.onclick = function() {
+  sidebar.classList.toggle("active");
+  if(sidebar.classList.contains("active")){
+  sidebarBtn.classList.replace("bx-menu" ,"bx-menu-alt-right");
+}else
+  sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
+}
+ </script>
+
+</body>
+</html>
+
+
+
