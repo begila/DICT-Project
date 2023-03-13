@@ -6,7 +6,7 @@
  
     <link rel="stylesheet" href="style.css">
     <title>Travel Order and Gatepass Management System </title>
-  
+    
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -32,14 +32,14 @@
           </a>
         </li>
         <li>
-          <a href="tra_request.html" class="active">
+          <a href="tra_request.html">
             <i class='bx bx-clipboard' ></i>
             <span class="links_name">Request Records</span>
           </a>
         </li>
       
         <li>
-          <a class="dropdown-btn" ><i class="fa fa-gear"></i><span class="links_name">Account Settings </span>
+          <a class="dropdown-btn" class="active"><i class="fa fa-gear"></i><span class="links_name">Account Settings </span>
             <!-- dropdown button-->
             <i class="fa fa-angle-right dropdown"></i></a>
             <div class="dropdown-container">
@@ -60,60 +60,49 @@
     <nav>
       <div class="sidebar-button">
         <i class='bx bx-menu sidebarBtn'></i>
-        <span class="dashboard">Manage Requests</span>
+        <span class="dashboard">Profile</span>
       </div>
     </nav>
 
-    <div class="home-content">
+       <div class="home-content">
       <div class="table">
-        <!--Search box-->
-      <div class="search">
-          <input class="search-box" placeholder="search">
-          <button class="search_here"><i class='bx bx-search'></i></button>
-      </div>
-
       <div class="table_section">
-        <table class="table_content">
-          <thead>
-            <!--Option button to choose which table to display-->
-            <div class="btn">
-              <a href="tra_request.html" class="act">Travel Request</a> >
-              <a href="gate_request.html">Gatepass</a>
-            </div><br><br>
-              <!-- Table for list of travel request -->
-            <tr>
-              <th>DATE REQUESTED</th>
-              <th>NAME</th>
-              <th>POSITION</th>
-              <th>DIVISION/AGENCY</th>
-              <th>DESTINATION</th>
-              <th>INCLUSIVE DATE OF TRAVEL</th>
-              <th>PURPOSE OF THE TRAVEL</th>
-              <th width="100px">STATUS</th>
-              <th width="100px">ACTIONS</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>01-09-2023</td>
-              <td>Juan Dela Cruz</td>
-              <td>ITO III</td>
-              <td>TOD</td>
-              <td>Mount Malayarat golf & Country Club</td>
-              <td>01-12-2023</td>
-              <td>Committees for Ceremonial</td>
-              <td>Pending</td>
-              <td>
-                <button class="view"><i class="fa fa-eye"></i> View</button><br><br>
-                <button class="edit"><i class="fa fa-edit"></i>Edit</button><br><br>
-                <button class="delete"><i class="fa fa-trash"></i>Delete</button>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+        <div class="table_profile" align="center">
+        <h2>PROFILE DETAILS</h2><br>
+        <table class="profile">
+                    <tbody>
+                        <tr>
+                            <td width="50%"><h4>NAME</h4></td>
+                            <td width="10%">:</td>
+                            <td width="50%">Johny</td>
+                        </tr>
+                        <tr>
+                            <td><h4>LASTNAME</h4></td>
+                            <td>:</td>
+                            <td>Bravo</td>
+                        </tr>
+                        <tr>
+                            <td><h4>USERNAME</h4></td>
+                            <td>:</td>
+                            <td>Admin</td>
+                        </tr>
+                        <tr>
+                            <td><h4>ROLE</h4></td>
+                            <td>:</td>
+                            <td>Admin</td>
+                        </tr>
+                        <tr>
+                            <td><h4>USER EMAIL</h4></td>
+                            <td>:</td>
+                            <td>noreply@gmail.com</td>
+                        </tr>
+                    </tbody>
+                </table>
+              </div>
         </div>
       </div>
     </div>
+
   </section>
 
   <script>

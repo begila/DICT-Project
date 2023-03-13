@@ -6,7 +6,7 @@
  
     <link rel="stylesheet" href="style.css">
     <title>Travel Order and Gatepass Management System </title>
-  
+    
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,28 +26,26 @@
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="user.html">
             <i class='bx bxs-group'></i>
             <span class="links_name">Users</span>
           </a>
         </li>
         <li>
-          <a href="#">
-            <i class='bx bx-file' ></i>
-            <span class="links_name">Documents</span>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <i class='bx bx-folder'></i>
-            <span class="links_name">Records</span>
-          </a>
-        </li>
-        <li>
-          <a href="tra_request.html">
+          <a href="tra_request.html" class="active">
             <i class='bx bx-clipboard' ></i>
-            <span class="links_name"> Travel Requests</span>
+            <span class="links_name">Request Records</span>
           </a>
+        </li>
+      
+        <li>
+          <a class="dropdown-btn" ><i class="fa fa-gear"></i><span class="links_name">Account Settings </span>
+            <!-- dropdown button-->
+            <i class="fa fa-angle-right dropdown"></i></a>
+            <div class="dropdown-container">
+              <a href="profile.html" class="sub-item"> <i class='bx bxs-user-account' ></i>Profile</a>
+              <a href="#" class="sub-item"> <i class='bx bxs-key' ></i>Change Password</a>
+            <div>
         </li>
 
         <li class="log_out">
@@ -69,23 +67,21 @@
     <!-- Table for list of request -->
     <div class="home-content">
       <div class="table">
-      <div class="table_header">
-        <p class="title">List of Request</p>
-      </div><br>
       <div class="search">
           <input class="search-box" placeholder="search">
           <button class="search_here"><i class='bx bx-search'></i></button>
-      </div><br>
+      </div>
       <div class="table_section">
-        <table>
+        <table class="table_content">
           <thead>
 
-          	<!-- Option button -->
+          	<!-- Option button to choose which table to display-->
           	<div class="btn">
-              <a href="tra_request.html">TRAVEL ORDER</a>
-              <a href="gate_request.html" class="act">GATEPASS</a>
-            </div>
-
+              <a href="tra_request.html">Travel Request</a> >
+              <a href="gate_request.html" class="act">Gatepass</a>
+            </div><br><br>
+            
+                <!-- Table for list of Gatepass request -->
             <tr>
               <th width="100px">CNO.</th>
               <th width="140px">NAME</th>
@@ -135,6 +131,22 @@ sidebarBtn.onclick = function() {
 }
  </script>
 
+<script>
+ var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+    } else {
+      dropdownContent.style.display = "block";
+    }
+  });
+}
+</script>
 </body>
 </html>
 
